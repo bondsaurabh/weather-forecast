@@ -2,7 +2,7 @@
 
 A modern, responsive weather application built with Spring Boot and React that provides real-time weather information using the OpenWeatherMap API.
 
-![Weather App Screenshot](screenshots/weather-app.png)
+![Weather App Screenshot](screenshots/weather-forecast-app.png)
 
 ## Features
 
@@ -97,11 +97,30 @@ GET `/api/weather/{city}`
 #### Success Response
 ```json
 {
-  "city": "London",
-  "temperature": 12.5,
-  "humidity": 76,
-  "description": "Partly cloudy",
-  "windSpeed": 4.1
+  "description": "scattered clouds",
+  "temperature": 8.33,
+  "windSpeed": 2.57,
+  "humidity": 85,
+  "name": "Houston",
+  "main": {
+    "temp": 8.33,
+    "feels_like": 6.79,
+    "temp_min": 7.23,
+    "temp_max": 10.01,
+    "pressure": 1029,
+    "humidity": 85,
+    "sea_level": 1029,
+    "grnd_level": 1027
+  },
+  "weather": [
+    {
+      "description": "scattered clouds"
+    }
+  ],
+  "wind": {
+    "speed": 2.57,
+    "deg": 10
+  }
 }
 ```
 
@@ -115,30 +134,30 @@ GET `/api/weather/{city}`
 ## Sample Weather Data
 
 ### London, UK
-![London Weather](screenshots/london-weather.png)
+![London Weather](screenshots/London-UK.png)
 ```yaml
-Temperature: 12°C
-Humidity: 76%
-Condition: Partly cloudy
-Wind Speed: 4.1 m/s
+Temperature: 6.69°C
+Humidity: 95%
+Condition: overcast clouds
+Wind Speed: 2.06 m/s
 ```
 
-### New York, USA
-![New York Weather](screenshots/newyork-weather.png)
+### Sydney, Australia
+![Sydney Weather](screenshots/Sydney-Australia.png)
 ```yaml
-Temperature: 22°C
-Humidity: 65%
-Condition: Clear sky
-Wind Speed: 3.6 m/s
+Temperature: 20.43°C
+Humidity: 64%
+Condition: broken clouds
+Wind Speed: 12.86 m/s
 ```
 
-### Tokyo, Japan
-![Tokyo Weather](screenshots/tokyo-weather.png)
+### Delhi, India
+![Delhi Weather](screenshots/Delhi-India.png)
 ```yaml
-Temperature: 18°C
-Humidity: 72%
-Condition: Light rain
-Wind Speed: 2.8 m/s
+Temperature: 14.05°C
+Humidity: 94%
+Condition: fog
+Wind Speed: 1.03 m/s
 ```
 
 ## Testing
@@ -190,4 +209,4 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 - OpenWeatherMap API for weather data
 - Spring Boot team for the amazing framework
-- React team for the frontend framework
+- React team for the frontend framework 
